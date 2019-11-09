@@ -1,3 +1,3 @@
 class Message < ApplicationRecord
-  before_save {reciever.downcase}
+  before_save {receiver.downcase}
 end
