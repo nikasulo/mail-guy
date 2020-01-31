@@ -1,5 +1,15 @@
 @import './components';
 
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: grey;
+}
+
 .page-holder {
   height: 100vh;
   position: fixed;
@@ -28,14 +38,38 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     text-align: center;
     
     @media #{$large-mq} {
       width: 50%;
       background-position: bottom;
     }
+  }
+}
+
+.logo {
+  font-family: $primary-font;
+  text-align: center;
+  position: fixed;
+  top: 1em;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: $primary-blue;
+  color: white;
+  width: 70%;
+  margin: auto;
+  padding: .5em;
+  border-radius: 5px;
+
+  @media #{$medium-mq} {
+    width: 40%;
+  }
+
+  @media #{$large-mq} {
+    width: 20%;
   }
 }

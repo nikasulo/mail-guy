@@ -4,6 +4,22 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
+  
+  .column {
+    align-items: center;
+    width: 90%;
+    font-size: 1.6em;
+    
+    @media #{$medium-mq} {
+      width: 80%;
+      font-size: .8em;
+    }
+
+    @media #{$large-mq} {
+      width: 50%;
+    }
+  }
 
   .action-btn {
     text-decoration: none;
@@ -19,18 +35,31 @@
   }
 
   .new-btn {
-    background-color: $primary-blue;
+    background-color: rgb(0, 185, 154);
+    align-self: center;
     
     &:hover {
       background-color: $secondary-blue;
     }
   }
-
+  
   .view-btn {
-    background-color: rgb(0, 185, 154);
+    background-color: grey;
 
     &:hover {
       background-color: rgb(0, 122, 102);
     }
   }
 }
+
+  .message-container {
+    width: 90%;
+
+    p {
+      white-space: pre-wrap;
+    }
+
+    .email-body {
+      font-size: 1em;
+    }
+  }
