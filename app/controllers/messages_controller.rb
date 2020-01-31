@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: [:show, :edit, :update, :destroy]
+  before_action :set_message, only: [:show, :edit, :update, :destroy, :success]
 
   # GET /messages
   # GET /messages.json
@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.save
         SendMessageMailer.send_message(@message).deliver_now
-        format.html { redirect_to success_path, notice: 'Message was successfully created.' }
+        format.html { redirect_to success_path(id: @message), notice: 'Message was successfully created.' }
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new }

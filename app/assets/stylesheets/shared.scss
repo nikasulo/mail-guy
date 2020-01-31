@@ -1,3 +1,5 @@
+@import './components';
+
 .page-holder {
   height: 100vh;
   position: fixed;
@@ -22,9 +24,18 @@
 
   
   .right {
-    width: 50%;
+    width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    
+    @media #{$medium-mq} {
+      width: 50%;
+      background-position: bottom;
+    }
   }
 }
