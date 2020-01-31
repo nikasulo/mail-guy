@@ -1,0 +1,36 @@
+@import './components';
+
+.message-holder {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .action-btn {
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+    transition: .5s;
+    margin-bottom: 1em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .new-btn {
+    background-color: $primary-blue;
+    
+    &:hover {
+      background-color: $secondary-blue;
+    }
+  }
+
+  .view-btn {
+    background-color: rgb(0, 185, 154);
+
+    &:hover {
+      background-color: rgb(0, 122, 102);
+    }
+  }
+}

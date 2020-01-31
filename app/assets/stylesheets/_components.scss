@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Zhi+Mang+Xing&display=swap');
+
+// Breakpoints
+$small-bp: 321px;
+$medium-bp: 481px;
+$large-bp: 769px;
+$xlarge-bp: 1024px;
+
+
+// Media Queiries
+$small-mq: "(min-width: #{$small-bp})";
+$medium-mq: "(min-width: #{$medium-bp})";
+$large-mq: "(min-width: #{$large-bp})";
+$xlarge-mq: "(min-width: #{$xlarge-bp})";
+
+// Fonts
+$primary-font: 'Zhi Mang Xing', cursive;
+$secondary-font: 'Quicksand', sans-serif;
+
+// Colors
+$primary-blue: rgb(0, 118, 187);
+$secondary-blue: rgb(0, 97, 153);
+
+* {
+  box-sizing: border-box;
+  font-family: $secondary-font;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.hidden {
+  animation: hide .6s ease-in-out 0s 1 forwards normal;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: .6;
+  }
+
+  66% {
+    opacity: .3;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

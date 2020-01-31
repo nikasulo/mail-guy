@@ -1,0 +1,39 @@
+@import './components';
+
+.message-form-holder {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  
+  form {
+    width: 80%;
+    @media #{$large-mq}{
+      width: 70%;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 1em .5em;
+      border-radius: 5px;
+      border: none;
+      background-color: rgb(238, 238, 238);
+      margin-bottom: 1em;
+    }
+
+    input[type="submit"] {
+      cursor: pointer;
+      background-color: $primary-blue;
+      color: white;
+      transition: .5s;
+
+      &:hover { background-color: $secondary-blue }
+    }
+  }
+
+}
+
+.form-title {
+  text-align: center;
+}

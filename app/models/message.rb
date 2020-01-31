@@ -6,6 +6,6 @@ class Message < ApplicationRecord
 
   validates :body, presence: true
   validates :subject, presence: true
-  validates :receiver, presence: true, format: {with: EMAIL_REGEX}
-  validates :sender, presence: true, format: {with: EMAIL_REGEX}
+  validates :receiver, presence: true, format: {with: EMAIL_REGEX, multiline: true}
+  validates :sender, presence: true, format: {with: EMAIL_REGEX, multiline: true}
 end

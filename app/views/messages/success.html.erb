@@ -1,0 +1,15 @@
+<div class="page-holder row">
+  <div class="left">
+  </div>
+  <div class="column right" style="background-image: url("<%= image_url('form_bg')%>")">
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+
+    <div class="message-holder column">
+      <h1>Your Message is on the way!</h1>
+      <%= link_to 'Send another', root_path, class: 'action-btn new-btn' %> <%= link_to  "View Message", @message, class: 'action-btn view-btn' %>
+    </div>
+  </div>
+
+</div>

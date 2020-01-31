@@ -17,26 +17,23 @@ class MessagesController < ApplicationController
     @message = Message.new
   end
 
-  # GET /messages/1/edit
-  def edit
-  end
-
   # POST /messages
   # POST /messages.json
   def create
     @message = Message.new(message_params)
-    # @message.sender = @message.sender.downcase.strip
-    # @message.receiver = @message.receiver.downcase.strip
     respond_to do |format|
       if @message.save
         SendMessageMailer.send_message(@message).deliver_now
-        format.html { redirect_to @message, notice: 'Message was successfully created.' }
+        format.html { redirect_to success_path, notice: 'Message was successfully created.' }
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new }
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def success
   end
 
   # PATCH/PUT /messages/1
