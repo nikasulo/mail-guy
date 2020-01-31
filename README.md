@@ -20,8 +20,8 @@ An app allows you send mails without login into an email client. Ever urgently n
 To get a local copy up and running follow these simple example steps.
 - Clone the project unto your local machine
 - `cd` into the project directory
-- Run `npm i`
-- Run `npm start`
+- Run `rails db:setup`
+- Run `rails s`
 - Open up `localhost:3000` in your browser to view the project
 
 ## 🤝 Contributing
