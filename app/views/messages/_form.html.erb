@@ -17,9 +17,15 @@
   </div>
 
   <div class="field">
-    <%= form.label :receiver %>
-    <%= form.text_field :receiver %>
+    <%= form.label :sender %>
+    <%= form.text_field :sender, placeholder: "From:" %>
   </div>
+  
+  <div class="field">
+    <%= form.label :receiver %>
+    <%= form.text_field :receiver, placeholder: "To:" %>
+  </div>
+
 
   <div class="field">
     <%= form.label :body %>
