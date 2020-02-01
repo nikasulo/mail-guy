@@ -1,5 +1,5 @@
 <div class="message-holder column">
-  <h1>Your message</h1>
+  <h3>Your message</h3>
   <div class="column">
     <p> 
       <strong>Subject:</strong>
@@ -16,8 +16,9 @@
       <%= @message.receiver %>
     </p>
 
+    <strong>Message:</strong>
+    <br>
     <div class="message-container">
-      <strong>Message:</strong>
       <p>
         <%= @message.body %>
       </p>
