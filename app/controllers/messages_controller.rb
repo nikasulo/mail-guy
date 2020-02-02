@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
   # GET /messages/1.json
   def view_message
     unless @message
-      flash[:notice] = "Oops! That message is no longer available"
+      flash[:deleted] = "Oops! That message is no longer available"
       redirect_to root_path
     end
   end
