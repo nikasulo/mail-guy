@@ -28,8 +28,9 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     respond_to do |format|
       if @message.save
+        flash[:created] = 'Messages are deleted after 10 seconds!' 
         SendMessageMailer.send_message(@message).deliver_now
-        format.html { redirect_to success_path(sender: @message.sender), notice: 'Messages are deleted after 10 seconds!' }
+        format.html { redirect_to success_path(sender: @message.sender)}
         format.json { render :show, status: :created, location: @message }
       else
         format.html { render :new }
