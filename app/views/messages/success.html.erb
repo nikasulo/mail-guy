@@ -9,7 +9,7 @@
     <div class="message-holder column">
       <h1>It's on the way!</h1>
       <%= link_to 'Send another', root_path, class: 'action-btn new-btn' %> 
-      <%= link_to  "View Message", view_message_path(sender: @sender), class: 'action-btn view-btn' %>
+      <%= link_to  "View Message", view_message_path(message: {sender: @sender}), class: 'action-btn view-btn' %>
     </div>
   </div>
 
