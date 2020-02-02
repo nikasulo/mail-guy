@@ -9,10 +9,6 @@
   </head>
 
   <body>
-  <% if flash[:deleted] %>
-    <p class="notice"><%= flash.deleted %></p>
-  <% end %>
-
     <h2 class="logo">MailGuy</h2>
     <%= yield %>
   </body>

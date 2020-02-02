@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
   # GET /messages/1.json
   def view_message
     unless @message
-      flash[:deleted] = "Oops! That message is no longer available"
+      flash[:message] = "Oops! That message is no longer available"
       redirect_to root_path
     end
   end
@@ -28,7 +28,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     respond_to do |format|
       if @message.save
-        flash[:created] = 'Messages are deleted after 10 seconds!' 
+        flash[:message] = 'Messages are deleted after 10 seconds!' 
         SendMessageMailer.send_message(@message).deliver_now
         format.html { redirect_to success_path(sender: @message.sender)}
         format.json { render :show, status: :created, location: @message }

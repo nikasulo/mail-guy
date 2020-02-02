@@ -2,8 +2,8 @@
   <div class="left">
   </div>
   <div class="column right" style="background-image: url(<%= image_url('success.svg')%>)">
-    <% if flash[:created] %>
-      <p class="notice"><%= notice %></p>
+    <% if flash[:message] %>
+      <p class="notice"><%= flash[:message] %></p>
     <% end %>
 
     <div class="message-holder column">
