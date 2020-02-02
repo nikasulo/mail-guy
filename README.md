@@ -1,9 +1,8 @@
 # Mail Guy
-
-Twitter for TV Shows
+An in-browser messaging tool
 
 # What it does
-An app allows you send mails without login into an email client. Ever urgently needed to send an email but didn't have access to your devices? Well you can now! It's a personal project I am working on and any feedback and contributions are welcome!
+It allows you send mails without login into an email client. Ever urgently needed to send an email but didn't have access to your devices? Well you can now! It's a personal project I am working on and any feedback and contributions are welcome!
 
 ## Built With
 - Rails
