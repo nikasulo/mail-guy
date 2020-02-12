@@ -36,6 +36,12 @@ Contributions, issues and feature requests are welcome! Start by:
 
 Feel free to check the [issues page](https://github.com/Oluwadamilareolusakin/mail-guy/issues).
 
+## Pending and proposed features
+* Making temporary email addresses
+* Receiving correspondence with temporary emails
+* Formating email text
+* Uploading attachments
+
 ## Attributions and Credit
 * Special thanks to the team working on Rails for such a beautiful framework
 * Thank you [Undraw](undraw.co) for your beautiful illustrations!
